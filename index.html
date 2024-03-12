@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            display: grid; /* Cambiado de flex a block */
+            
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            border: 2px solid black;
+            color: black;
+            background-color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+            cursor: pointer;
+            margin-bottom: 30px; /* Espaciado entre botones */
+        }
+
+        .button:hover {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        nav {
+            display : flex;
+            background-color: #cfe4f3;
+            color: #fff;
+            padding: 0.1px;
+            text-align: left;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5% ;
+            z-index: 1000; 
+        }
+        
+        .logo{
+            height: 40px;
+        }
+
+        nav span {
+            font-size: 30px;    
+        }
+
+
+    </style>
+</head>
+<body>
+
+   <!-- <nav>
+        <a href="index.html"><img src="./logos/arrow_left_white_48dp.svg" alt="Regresar" class="logo"></a>
+        <span>Tiempo Líneas</span>
+    </nav>
+    -->
+
+    <div class="container">
+        <button class="button" id="BotonLineaJumbo" onclick="location.href='lineaJumbo.html' ">Línea Jumbo</button>
+        <button class="button" id="BotonLinea330" onclick="location.href='linea330.html'">Línea 330</button>
+        <button class="button" id="BotonLineaLatas" onclick="location.href='lineaLatas.html'">Línea Latas</button>
+        <button class="button" id="BotonVelTras" onclick="location.href='velTras.html'">Vel Trasiego</button>
+    </div>
+
+</body>
+</html>

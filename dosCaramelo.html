@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dosificación malta caramelo</title>
+  <style>
+    body {
+        margin: 0;
+        padding: 20px; /* Añadido para espacio alrededor del contenido */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .filaBotones {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="row">
+    <label class="label">Cantidad malta pálida:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+    <input type="number" id="promPalida" class="input" value="17848.91">
+</div>
+
+    <div class="row">
+        <label class="label">Cantidad malta caramelo:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+        <input type="number" id="tgColor" class="input">
+    </div>
+
+    <div class="row">
+        <label class="label" >Poder colorante malta caramelo:&nbsp&nbsp</label>
+        <input type="number" id="pcCaramelo" class="input">
+    </div>
+
+    <div class="row">
+        <label class="label" >Poder colorante malta pálida:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+        <input type="number" id="pcPalida" class="input">
+    </div>
+    
+
+    <div class="filaBotones">
+        <button onclick="location.href='dosCaramelo.html'"> Borrar datos </button>
+        <button id="calcularMalta"> Calcular </button>
+        <button onclick="location.href='index.html'"> Regresar </button>
+    </div>
+    <script src="./script4.js"></script>
+</body>
+</html>

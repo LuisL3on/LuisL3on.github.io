@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velocidad Trasiego</title>
+  <style>
+    body {
+        margin: 0;
+        padding: 20px; /* Añadido para espacio alrededor del contenido */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .filaBotones {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="row">
+        <label>Vel Trasiego:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+        <input type="number" id="velTras" value="0">
+        <label>&nbspHL/H</label>
+    </div>
+
+    <div class="row">
+        <label>Vol Restante:&nbsp&nbsp&nbsp</label>
+        <input type="number" id="volRes" value="0">
+        <label>&nbspHL</label>
+    </div>
+
+    <div class="filaBotones">
+        <button onclick="location.href='velTras.html'"> Borrar datos </button>
+        <button id="calcularVel"> Calcular </button>
+        <button onclick="location.href='index.html'"> Regresar </button>
+    </div>
+
+    <script src="./script5.js"></script>
+
+</body>
+</html>
