@@ -20,14 +20,35 @@ const volumenBBT14330 = document.querySelector('#BBT14330');
 const volumenBBT15330 = document.querySelector('#BBT15330');
 
 var btnCalcular330 = document.getElementById('calcular330');
+var fechaHoraDiv = document.getElementById('fechaHora');
+var checkbox = document.getElementById('mostrarFila');
+var fechaInput = document.getElementById('fecha');
+var horaInput = document.getElementById('hora');
+
+fechaHoraDiv.classList.add('hidden');
+checkbox.addEventListener('change',OnclickCheck);
+
+function OnclickCheck(){
+    if (checkbox.checked) {
+        fechaHoraDiv.classList.remove('hidden');
+    } else {
+        fechaHoraDiv.classList.add('hidden');
+    }
+}
+
 
 btnCalcular330.addEventListener('click',Onclickbtncalcular330);
 
 //*********************** Funcion calcular 330 **********************
 function Onclickbtncalcular330(){
     
-    
-    var fechaActual = new Date();
+    if (checkbox.checked) {
+        var fechaActual = new Date(fechaInput.value + 'T' + horaInput.value);
+        console.log(fechaActual);
+    } else {
+        var fechaActual = new Date();
+        console.log(fechaActual);
+    }
     
     var tiempoSeparado = separarTiempo(time330.value);
     

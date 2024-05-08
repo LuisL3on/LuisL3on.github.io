@@ -30,6 +30,11 @@
         height: 30px;
         width: 150px; 
     }
+
+    .hidden {
+        display: none;
+        margin-bottom: 10px;
+    }
   </style>
 
 
@@ -42,6 +47,19 @@
             <label class="fila0">Tiempo que tarda línea 330 en desoupar un BBT:</label>
             <input type="text" id="tiempo330" placeholder="04:30:00" value="04:30:00">
         </div>
+    </div>
+
+    <div class="fila">
+        <input type="checkbox" id="mostrarFila">Ingresar Fecha en Manual   
+    </div>
+
+   <div class="fila">
+    <div id="fechaHora" class="hidden">
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha">
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" step=any>
+    </div>
     </div>
 
     <div class="fila">

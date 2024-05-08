@@ -20,12 +20,35 @@ const volumenBBT14L = document.querySelector('#BBT14L');
 const volumenBBT15L = document.querySelector('#BBT15L');
 
 var btnCalcularLatas = document.querySelector('#calcularLatas');
+var fechaHoraDiv = document.getElementById('fechaHora');
+var checkbox = document.getElementById('mostrarFila');
+var fechaInput = document.getElementById('fecha');
+var horaInput = document.getElementById('hora');
+
+fechaHoraDiv.classList.add('hidden');
+checkbox.addEventListener('change',OnclickCheck);
+
+function OnclickCheck(){
+    if (checkbox.checked) {
+        fechaHoraDiv.classList.remove('hidden');
+    } else {
+        fechaHoraDiv.classList.add('hidden');
+    }
+}
+
 
 btnCalcularLatas.addEventListener('click',OnclickbtncalcularLatas);
 
 //*********************** Funcion calcular Latas **********************
 function OnclickbtncalcularLatas(){
-    var fechaActual = new Date();
+    
+    if (checkbox.checked) {
+        var fechaActual = new Date(fechaInput.value + 'T' + horaInput.value);
+        console.log(fechaActual);
+    } else {
+        var fechaActual = new Date();
+        console.log(fechaActual);
+    }
     
     var tiempoSeparado = separarTiempo(timeL.value);
     

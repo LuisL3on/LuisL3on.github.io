@@ -23,6 +23,22 @@ const volumenBBT15J = document.querySelector('#BBT15J');
 //******************** Botones Calcular *******************
 
 var btnCalcularJumbo = document.getElementById('calcularJumbo');
+var fechaHoraDiv = document.getElementById('fechaHora');
+var checkbox = document.getElementById('mostrarFila');
+var fechaInput = document.getElementById('fecha');
+var horaInput = document.getElementById('hora');
+
+fechaHoraDiv.classList.add('hidden');
+checkbox.addEventListener('change',OnclickCheck);
+
+function OnclickCheck(){
+    if (checkbox.checked) {
+        fechaHoraDiv.classList.remove('hidden');
+    } else {
+        fechaHoraDiv.classList.add('hidden');
+    }
+}
+
 
 //****************** Se definen acciones botones *****************
 btnCalcularJumbo.addEventListener('click',OnclickbtncalcularJumbo);
@@ -30,8 +46,14 @@ btnCalcularJumbo.addEventListener('click',OnclickbtncalcularJumbo);
 //*********************** Funcion calcular Jumbo **********************
 function OnclickbtncalcularJumbo(){
     
-    var fechaActual = new Date();
-    
+    if (checkbox.checked) {
+        var fechaActual = new Date(fechaInput.value + 'T' + horaInput.value);
+        console.log(fechaActual);
+    } else {
+        var fechaActual = new Date();
+        console.log(fechaActual);
+    }
+     
     var tiempoSeparado = separarTiempo(timeJ.value);
     
     var vol = parseInt(volumenBBT1J.value,10) + parseInt(volumenBBT2J.value,10) + parseInt(volumenBBT3J.value,10) + parseInt(volumenBBT4J.value,10)+ parseInt(volumenBBT5J.value,10)+ parseInt(volumenBBT6J.value,10)+ parseInt(volumenBBT7J.value,10) + parseInt(volumenBBT8J.value,10) + parseInt(volumenBBT9J.value,10) + parseInt(volumenBBT10J.value,10) + parseInt(volumenBBT11J.value,10)+ parseInt(volumenBBT12J.value,10) + parseInt(volumenBBT13J.value,10) + parseInt(volumenBBT14J.value,10) + parseInt(volumenBBT15J.value,10) ;

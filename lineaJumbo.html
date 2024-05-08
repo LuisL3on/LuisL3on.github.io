@@ -22,8 +22,7 @@
     }
     .fila0{
         width: 350px; 
-    } 
-
+    }
     label {
       display: inline-block;
       width: 60px; 
@@ -32,6 +31,11 @@
     input {
         height: 30px;
         width: 150px; 
+    }
+
+    .hidden {
+        display: none;
+        margin-bottom: 10px;
     }
   </style>
 
@@ -45,6 +49,19 @@
             <label class="fila0">Tiempo que tarda línea Jumbo en desoupar un BBT:</label>
             <input type="text" id="tiempoJ" value="05:00:00" name="fila0" placeholder="05:00:00">
         </div>
+    </div>
+
+    <div class="fila">
+        <input type="checkbox" id="mostrarFila">Ingresar Fecha en Manual   
+    </div>
+
+   <div class="fila">
+    <div id="fechaHora" class="hidden">
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha">
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" step=any>
+    </div>
     </div>
 
     <div class="fila">
